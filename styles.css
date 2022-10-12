@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    /* Main colors */
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* Secondary colors */
+    --Transparent-white: hsla(0, 0%, 100%, 0.75); /* Paragraphs */
+    --Very-light-gray: hsl(0, 0%, 95%); /*background, headings, buttons */
+}
+
+
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    justify-content: center;
+    font-family: "Lenxend Deca", sans-serif;
+    font-weight: 400;
+}
+
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+    
+}
+
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.box h2{
+    font-family: "Big Shoulders Display", cursive;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 35px;
+    color: white;
+}
+
+.box p{
+    color: var(--Transparent-white);
+    padding-top: 20px;
+    line-height: 1.9;
+    
+}
+
+.box{
+    padding: 35px;
+}
+
+.sedans{
+    background-color: var(--Bright-orange);
+    
+}
+
+.suvs{
+    background-color: var(--Dark-cyan);
+}
+
+.luxury{
+    background-color: var(--Very-dark-cyan);
+}
+.sedans button{
+    color: var(--Bright-orange);
+}
+
+.suvs button{
+    color:var(--Dark-cyan)
+}
+
+.luxury button{
+    color: var(--Very-dark-cyan);
+}
+
+button{
+    padding: 13px 27px;
+    border-radius: 26px;
+    margin-top: 60px;
+    border:2px solid white;
+    gap: 1rem ;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+button:hover{
+    color: white;
+    background: transparent;
+}
+
+@media only screen and (max-width:768px){
+
+    .card{
+        grid-template-columns: 1fr;
+        
+    }
+}
+
+@media only screen and (max-width:425px){
+    .card{
+        grid-template-columns: 1fr;
+        margin: 1rem .5rem;
+    }
+}
